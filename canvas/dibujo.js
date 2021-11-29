@@ -2,8 +2,21 @@ var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
 //console.log(lienzo); //comando usado para probar lienzo
 //dentro de la funcion colocamos el código para generar una  línea
-dibujarLinea("pink",10,300,220,10);
-dibujarLinea("yellow",300,10,10,220);
+var lineas = 30; 
+var l = 0, yi , xf; 
+
+while (l < lineas)
+{
+    dibujarLinea("#AAF",0,yi,xf,300);
+    console.log("linea " +l);
+    yi = l * 10;
+    xf = ( l + 1) * 10 ;
+    l++;    
+}
+
+dibujarLinea("black",1,1,1,300)
+dibujarLinea("black",1,299,299,299)
+
 function dibujarLinea(color,xinicial, yinicial,xfinal,yfinal)
 {
     lienzo.beginPath();
