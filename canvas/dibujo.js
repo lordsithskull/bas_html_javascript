@@ -5,13 +5,12 @@ var lienzo = d.getContext("2d");
 var lineas = 30; 
 var l = 0, yi , xf; 
 
-while (l < lineas)
+for (l; l < lineas; l++)
 {
     dibujarLinea("#AAF",0,yi,xf,300);
     console.log("linea " +l);
     yi = l * 10;
     xf = ( l + 1) * 10 ;
-    l++;    
 }
 
 dibujarLinea("black",1,1,1,300)
