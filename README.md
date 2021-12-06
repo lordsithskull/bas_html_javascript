@@ -7,3 +7,4 @@ Los ejercicios abarcan la parte básica como:
 
   *Manejo de vairables
   *Estructuras de control
+  *Generacion de dibujos utilizando la etiqueta canvas y ciclos de iteración  como while y for
