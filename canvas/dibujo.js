@@ -8,23 +8,31 @@ var l, xi, yi , xf,yf ;
 for (l = 0 ; l < lineas; l++) //forma inferior izquierda 
 {
     dibujarLinea("#AAF",0,yi,xf,300);
-    console.log("linea " +l);
+    //console.log("linea " +l);
     yi = l * 10;
     xf = ( l + 1) * 10 ;
 }
 
 for (l = 0; l < lineas; l++) //forma inferior derecha
 {
-    dibujarLinea("#15861d",xi,300,300,yf);
+    dibujarLinea("#FFC300",xi,300,300,yf);
     console.log("linea " +l);
     xi = l * 10;
-    yf = 300 - ((l+1)*10);
+    yf = 300 - (( l + 1 ) * 10);
+}
+
+for (l = 0; l < lineas; l++) //forma superior izquierda 
+{
+    dibujarLinea("#ab0f2c",0,yi,xf,0);
+   // console.log("linea "+ l);
+    yi = 300 - (l * 10);
+    xf = (l + 1 ) * 10;
 }
 
 for (l = 0; l < lineas; l++) //forma superior derecha
 {
     dibujarLinea("#15861d",300,yi,xf,0);
-    console.log("linea " +l);
+  //  console.log("linea " +l);
     yi = l * 10;
     xf = ( l + 1) * 10 ;
 }
