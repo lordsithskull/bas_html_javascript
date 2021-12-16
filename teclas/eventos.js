@@ -26,7 +26,7 @@ function dibujarTeclado(evento) //Se genera el primer evento
             break;
             
         case teclas.RIGHT:
-            console.log(derecha);
+            console.log("derecha");
             break;
         
         default:
