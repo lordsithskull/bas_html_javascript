@@ -30,25 +30,25 @@ function dibujarTeclado(evento) //Se genera el primer evento
     {        
         case teclas.UP:
             console.log("arriba");
-            dibujarLinea(colorcito , x, y, x, y - movimiento);
+            dibujarLinea(colorcito , x, y, x, y - movimiento, papel);
             y = y - movimiento;
             break;
 
         case teclas.DOWN:
-            dibujarLinea(colorcito , x, y, x, y + movimiento);
+            dibujarLinea(colorcito , x, y, x, y + movimiento, papel);
             y = y + movimiento;
             console.log("abajo");
             break;
 
         case teclas.LEFT:
             console.log("izquierda");
-            dibujarLinea(colorcito , x, y, x - movimiento, y );
+            dibujarLinea(colorcito , x, y, x - movimiento, y, papel);
             x = x - movimiento;
             break;
             
         case teclas.RIGHT:
             console.log("derecha");
-            dibujarLinea(colorcito , x, y, x + movimiento, y );
+            dibujarLinea(colorcito , x, y, x + movimiento, y ,papel);
             x = x + movimiento;
             break;
         
