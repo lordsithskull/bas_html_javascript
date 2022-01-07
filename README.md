@@ -11,8 +11,14 @@ Los ejercicios abarcan diferenetes como:
   *Estructuras de control como el if
   *Creación de funciones
 
-Proyecto CANVAS
+1°- Primer Proyecto CANVAS
 Primer proyecto del curso "Dibujo con canvas"
 
 Dibujo nos permite crear un dibujo utilizando la etiqueta < canvas >, y por medio de una sencilla ecuación y javascript nos permite generar un dibujo que pide al usuario el número de líneas a usar.
 
+
+2° - Proyecto CANVAS: Dibujo con teclado
+
+El segundo proyecto nos permite dibujar usando los elementos anteriores, pero con la libertad de dibujar de forma libre usando teclado, además se agregan los retos de usar mouse e
+
+RETO GENERAR EL CÓDIGO PARA USAR MOUSE Y SISTEMAS TOUCH
