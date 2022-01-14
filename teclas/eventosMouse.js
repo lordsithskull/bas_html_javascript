@@ -1,22 +1,34 @@
-document.addEventListener("mousedown",dibujarMouse);
+document.addEventListener("mousedown",posiscionInicial);//Listener para presionar el boton del mouse
+document.addEventListener("mouseup",posiscionFinal); //Listener para soltar el mouse
+document.addEventListener("mousemove",dibujarLinea);//Listener para dibujar con el mouse
+
 var cuadrito = document.getElementById("area_de_dibujo");
-var papel = cuadrito.getContext("2d");
-var x = 150, y = 150; //variables de arranque
+var lienzo = cuadrito.getContext("2d");
 
-dibujarLinea("red",149,149,151,151,papel); //Linea de prueba para verificar que canvas funciona
+let dibujar = false; //Bandera para determinar si se debe o no dibujar
 
-function dibujarLinea(color,xinicial, yinicial,xfinal,yfinal, lienzo)
+//funcion para determinar posicion inicial para dibujar
+function posiscionInicial(){
+    dibujar = true;
+    console.log(dibujar);
+}
+
+//funcion para determinar posicion final de dibujar
+function posiscionFinal(){
+    dibujar = false;
+    console.log(dibujar);
+    lienzo.beginPath();// se usa para generar un nuevo trazo y no continuar el dibujo del trazo previo
+}
+
+function dibujarLinea(evento)
     {
-        lienzo.beginPath();
-        lienzo.strokeStyle = color;
-        lienzo.moveTo(xinicial,yinicial); //punto de origen
-        lienzo.lineWidth = 5; //ancho de la linea en px
-        lienzo.lineTo(xfinal,yfinal); //punto final
+       if (!dibujar) return;   
+        lienzo.strokeStyle = "black";
+        lienzo.lineWidth = 15; //ancho de la linea en px
+        lienzo.lineTo(evento.clientX,evento.clientY); //(evento.clientX,evento.clientY) permiten determinar la posición del mouse
         lienzo.stroke(); 
-        lienzo.closePath();//cierra el camino de la linea
+        lienzo.beginPath();
+        lienzo.moveTo(evento.clientX,evento.clientY);
+        console.log(dibujarLinea);
     }
 
-function dibujarMouse(evento) //Se genera el primer evento 
-{
-   console.log("mousedown");
-}
