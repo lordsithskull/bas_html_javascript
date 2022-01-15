@@ -1,12 +1,15 @@
-var z;
+var vp = document.getElementById("villaPlatzi"); //preparacion del canvas
+var papel = vp.getContext("2d"); //contexto del canvas
+var mapa = "tile.png"; //ruta del "mapa"
 
+var imagen = new Image();// Se genera un nuevo objeto Imagen
+imagen.src = mapa; //Ruta del mapa
+imagen.addEventListener("load",dibujar);//Listener para la carga del objeto
 
-for (i = 0; i < 10; i++)
+function dibujar()
 {
-    z = aleatorio(-2,4);
-    document.write(z +", ");
+    papel.drawImage(imagen,0,0);//Se dibuja la imagen en la posicion  (x,y)
 }
-
 
 function aleatorio(min, maxi)
 {
