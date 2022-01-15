@@ -25,17 +25,17 @@ function dibujarFondo()
 
 function dibujarVaca()
 {
-    papel.drawImage(vaca,0,0);
+    papel.drawImage(vaca,50,20);
 }
 
 function dibujarCerdo()
 {
-    papel.drawImage(cerdo,0,0);
+    papel.drawImage(cerdo,30,60);
 }
 
 function dibujarPollo()
 {
-    papel.drawImage(Pollo,0,0);
+    papel.drawImage(pollo,20,80);
 }
 
 function aleatorio(min, maxi)
