@@ -15,6 +15,8 @@ fondo.imagen.src = fondo.url;
 fondo.imagen.addEventListener("load",cargarFondo);//Listener para la carga del objeto
 
 vaca.imagen = new Image();
+vaca.imagen.src = vaca.url;
+fondo.imagen.addEventListener("load",cargarVaca);
 
 function cargarFondo()
 {
@@ -30,9 +32,13 @@ function cargarVaca()
 
 function dibujar()
 {
-    if (fondo.cargaOK == true)
+    if (fondo.cargaOK)// con valores bool se puede quitar la condición
     {
         papel.drawImage(fondo.imagen,0,0);
+    }
+    if (vaca.cargaOK)
+    {
+        papel.drawImage(vaca.imagen,50,40);
     }
 }
 
