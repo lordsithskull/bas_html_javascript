@@ -4,9 +4,13 @@ var papel = vp.getContext("2d"); //contexto del canvas
 var fondo = {
     url:"tile.png",
     cargaOK: false
-}
+};
 var vaca = {
     url:"vaca.png",
+    cargaOK: false
+};
+var pollo = {
+    url:"pollo.png",
     cargaOK: false
 };
 
@@ -16,9 +20,13 @@ fondo.imagen.addEventListener("load",cargarFondo);//Listener para la carga del o
 
 vaca.imagen = new Image();
 vaca.imagen.src = vaca.url;
-fondo.imagen.addEventListener("load",cargarVaca);
+vaca.imagen.addEventListener("load",cargarVaca);
 
-var cantidad = aleatorio(0,25);
+pollo.imagen = new Image();
+pollo.imagen.src = pollo.url;
+pollo.imagen.addEventListener("load",cargarPollo);
+
+var cantidad = aleatorio(0,10);
 
 function cargarFondo()
 {
@@ -29,6 +37,12 @@ function cargarFondo()
 function cargarVaca()
 {
     vaca.cargaOK = true;
+    dibujar();
+}
+
+function cargarPollo()
+{
+    pollo.cargaOK = true;
     dibujar();
 }
 
@@ -48,7 +62,11 @@ function dibujar()
                 papel.drawImage(vaca.imagen,x,y);
             }
         }
-        console.log(cantidad);
+    if(pollo.cargaOK)
+    {
+        papel.drawImage(pollo.imagen,250,250);
+    }
+    console.log(cantidad);
 }
 
 
