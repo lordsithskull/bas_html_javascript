@@ -4,14 +4,13 @@ var papel = vp.getContext("2d"); //contexto del canvas
 var fondo = {
     url:"tile.png",
     cargaOK: false
-};
-
+}
 var vaca = {
     url:"vaca.png",
     cargaOK: false
 };
 
-fondo = new Image();// Se genera un nuevo objeto Imagen, el cual es el fondo
+fondo.imagen = new Image();// Se genera un nuevo objeto Imagen, el cual es el fondo
 fondo.imagen.src = fondo.url;
 fondo.imagen.addEventListener("load",cargarFondo);//Listener para la carga del objeto
 
