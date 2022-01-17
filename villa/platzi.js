@@ -13,6 +13,10 @@ var pollo = {
     url:"pollo.png",
     cargaOK: false
 };
+var cerdo ={
+    url:"cerdo.png",
+    cargaOK: false
+};
 
 fondo.imagen = new Image();// Se genera un nuevo objeto Imagen, el cual es el fondo
 fondo.imagen.src = fondo.url;
@@ -26,6 +30,10 @@ pollo.imagen = new Image();
 pollo.imagen.src = pollo.url;
 pollo.imagen.addEventListener("load",cargarPollo);
 
+cerdo.imagen = new Image();
+cerdo.imagen.src = "cerdo.png";
+cerdo.imagen.addEventListener("load",cargarCerdo);
+
 var cantidad = aleatorio(0,10);
 
 function cargarFondo()
@@ -35,7 +43,7 @@ function cargarFondo()
 }
 
 function cargarVaca()
-{
+{ 
     vaca.cargaOK = true;
     dibujar();
 }
@@ -43,6 +51,12 @@ function cargarVaca()
 function cargarPollo()
 {
     pollo.cargaOK = true;
+    dibujar();
+}
+
+function cargarCerdo()
+{
+    cerdo.cargaOK = true;
     dibujar();
 }
 
@@ -66,7 +80,11 @@ function dibujar()
     {
         papel.drawImage(pollo.imagen,250,250);
     }
-    console.log(cantidad);
+        
+    if(cerdo.cargaOK)
+    {
+        papel.drawImage(cerdo.imagen,100,200);
+    }
 }
 
 
