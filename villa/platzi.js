@@ -18,6 +18,8 @@ vaca.imagen = new Image();
 vaca.imagen.src = vaca.url;
 fondo.imagen.addEventListener("load",cargarVaca);
 
+var cantidad = aleatorio(0,25);
+
 function cargarFondo()
 {
     fondo.cargaOK = true;
@@ -37,15 +39,22 @@ function dibujar()
         papel.drawImage(fondo.imagen,0,0);
     }
     if (vaca.cargaOK)
-    {
-        papel.drawImage(vaca.imagen,50,40);
-    }
+        {
+            
+            for(var v =0; v < cantidad; v++)
+            {
+                var x = aleatorio(0,420);
+                var y = aleatorio(0,420);
+                papel.drawImage(vaca.imagen,x,y);
+            }
+        }
+        console.log(cantidad);
 }
 
 
 function aleatorio(min, maxi)
 {
-    var resultado;
+    var resultado; 
     resultado = Math.ceil (Math.random() * (maxi - min + 1)) + min; //Math.floor redondeo hacia abajo, Maht.
     return resultado;
 }
