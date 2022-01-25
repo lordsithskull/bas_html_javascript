@@ -126,28 +126,48 @@ function dibujarTeclado(evento) //Se genera el primer evento
             console.log("arriba");            
             dibujar();           
             dibujarCerdo();
-            y = y - 10;           
+            if(y!=0)
+            {
+                y = y - 10;    
+            }
+            else
+                y = y;       
             break;
 
         case teclas.DOWN:
             console.log("abajo");
             dibujar();           
             dibujarCerdo();
-            y = y + 10;
+            if(y!= 420)
+            {
+                y = y + 10;    
+            }
+            else
+                y = y;     
             break;
 
         case teclas.LEFT:
             console.log("izquierda");
             dibujar();           
             dibujarCerdo();
-            x = x - 10;
+            if(x!=0)
+            {
+                x = x - 10;    
+            }
+            else
+                x = x;       
             break;
             
         case teclas.RIGHT:
             console.log("derecha");
             dibujar();           
             dibujarCerdo();
-            x = x + 10;
+            if(x!=420)
+            {
+                x = x + 10;    
+            }
+            else
+                x = x;       
             break;
         
         default:
