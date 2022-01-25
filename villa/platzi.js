@@ -1,5 +1,8 @@
 var vp = document.getElementById("villaPlatzi"); //preparacion del canvas
 var papel = vp.getContext("2d"); //contexto del canvas
+x = 0;
+y = 0;
+document.addEventListener("keydown", dibujarTeclado);
 
 var fondo = {
     url:"tile.png",
@@ -16,6 +19,13 @@ var pollo = {
 var cerdo ={
     url:"cerdo.png",
     cargaOK: false
+};
+
+var teclas = { //SE GENERA UN OBJETO USANDO NOTACION DE JSON
+    UP: 38,
+    DOWN: 40,
+    LEFT: 37,
+    RIGHT: 39 
 };
 
 fondo.imagen = new Image();// Se genera un nuevo objeto Imagen, el cual es el fondo
@@ -88,14 +98,8 @@ function dibujar()
         }
     }
     
-    cantidad = aleatorio(0,6);
-    if(cerdo.cargaOK)
-        for(var c =0; c < cantidad; c++)
-        {
-            x = aleatorio(0,420);
-            y = aleatorio(0,420);
-            papel.drawImage(cerdo.imagen,x,y);
-        }
+    dibujarCerdo();
+        
 }
 
 
@@ -104,4 +108,50 @@ function aleatorio(min, maxi)
     var resultado; 
     resultado = Math.ceil (Math.random() * (maxi - min + 1)) + min; //Math.floor redondeo hacia abajo, Maht.
     return resultado;
+}
+
+function dibujarCerdo()
+{
+    if(cerdo.cargaOK)
+        papel.drawImage(cerdo.imagen,x,y);
+}
+
+function dibujarTeclado(evento) //Se genera el primer evento 
+{
+    var colorcito = "blue";
+    var movimiento = 10;
+    switch(evento.keyCode)
+    {        
+        case teclas.UP:
+            console.log("arriba");            
+            dibujar();           
+            dibujarCerdo();
+            y = y - 10;           
+            break;
+
+        case teclas.DOWN:
+            console.log("abajo");
+            dibujar();           
+            dibujarCerdo();
+            y = y + 10;
+            break;
+
+        case teclas.LEFT:
+            console.log("izquierda");
+            dibujar();           
+            dibujarCerdo();
+            x = x - 10;
+            break;
+            
+        case teclas.RIGHT:
+            console.log("derecha");
+            dibujar();           
+            dibujarCerdo();
+            x = x + 10;
+            break;
+        
+        default:
+            console.log("otra tecla");
+            break;
+    }
 }
