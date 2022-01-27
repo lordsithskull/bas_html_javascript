@@ -1,21 +1,19 @@
 var numeros = 100;
+var divisible = false;
+
 for (var i = 1 ; i <= numeros; i++)
 {
-    if((i % 3 == 0) && (i % 5 == 0))
+    document.write(i);
+    divisible = false;
+    if(i % 3 == 0)
     {
-        document.write(i +" Fizz Buzz<br>");
+        document.write(" Fizz");        
+        divisible = true;
     }
-    else if(i % 3 == 0)
+    if(i % 5 == 0)
     {
-        document.write(i +" Fizz <br>");        
+        document.write(" Buzz");
+        divisible = true;        
     }
-    else if(i % 5 == 0)
-    {
-        document.write(i +" Buzz <br>");
-        
-    }
-    else
-    {
-        document.write(i + "<br>");
-    }
+        document.write("<br>");
 }
