@@ -21,4 +21,10 @@ Dibujo nos permite crear un dibujo utilizando la etiqueta < canvas >, y por medi
 
 El segundo proyecto nos permite dibujar usando los elementos anteriores, pero con la libertad de dibujar de forma libre usando teclado, además se agregan los retos de usar mouse e
 
-RETO GENERAR EL CÓDIGO PARA USAR MOUSE Y SISTEMAS TOUCH
+RETO: GENERAR EL CÓDIGO PARA USAR MOUSE Y SISTEMAS TOUCH
+
+3° - Tercer Proyecto: Villa Platzi
+
+El tercer proyecto usa los conceptos previos de uso de canvas para cargar una serie de imágenes, dibujadas sobre diferentes capas. Para esto se carga un fondo, un pollo, vaca y un cerdito, todas las imágenes son archivos PNG.
+
+RETO: GENERAR CÓDIGO PARA MOVER AL CERDITO CON EL TECLADO.
