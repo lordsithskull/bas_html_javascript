@@ -21,7 +21,12 @@ class Pakiman //Se genera la clase pakiman
         
         mostrar()
         {
+            
             document.body.appendChild(this.imagen);
+            document.write("<br><strong>" + this.nombre + "</strong><br>");
+            document.write("<strong> ATK " + this.ataque + "</strong><br>");
+            document.write("<strong> VID" + this.vida + "</strong><br><hr>");
+            
         }
 }
 
