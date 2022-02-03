@@ -7,4 +7,10 @@ var coleccion = [];
 coleccion.push(new Pakiman("Cauchin", 100, 30) );
 coleccion.push(new Pakiman("Pokacho", 80, 50) );
 coleccion.push(new Pakiman("Tocinauro", 120, 40) );
-console.log(coleccion);
+
+//Ciclo especial para recorrer los elementos en la coleccion
+//Se puede utilizar for con "in"(índice) o con "of"(objetos)
+for(var pakis of coleccion)
+{
+    pakis.mostrar();   
+}
