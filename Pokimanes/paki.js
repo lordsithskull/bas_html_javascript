@@ -10,6 +10,8 @@ var pokacho = new Pakiman("Pokacho", 80, 50);
 var tocinauro = new Pakiman("Tocinauro", 120, 40);
 console.log(cauchin, pokacho, tocinauro);
 
-tocinauro.mostrar();
-pokacho.mostrar();
-cauchin.mostrar();
+var coleccion = [];
+coleccion.push(cauchin);
+coleccion.push(pokacho);
+coleccion.push(tocinauro);
+console.log(coleccion);
