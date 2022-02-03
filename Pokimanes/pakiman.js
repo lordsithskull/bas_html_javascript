@@ -5,8 +5,7 @@ class Pakiman //Se genera la clase pakiman
             this.imagen = new Image();
             this.nombre = n;
             this.vida = v;
-            this.ataque = a;
-            
+            this.ataque = a;            
             this.imagen.src = imagenes[this.nombre];
         }
         hablar()
