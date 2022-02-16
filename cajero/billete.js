@@ -1,3 +1,4 @@
+var caja = [], entregado = [];
 class Billete
 {
     constructor(v,c)
@@ -12,3 +13,4 @@ class Billete
         document.write("Cantidad " + this.cantidad + " <br/>");        
     }
 }
+

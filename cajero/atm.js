@@ -1,34 +1,37 @@
-var caja = [], entregado = [];
-caja.push(new Billete(50, 1) );
+caja.push(new Billete(50, 5) );
 caja.push(new Billete(20, 20) );
 caja.push(new Billete(10, 2) );
 
 
-var dinero = 160, totalCaja = 0;
+var dinero = 150, totalCaja = 0;
 var division = 0, papeles = 0 ;
 
+var boton = document.getElementById("extraer");
+boton.addEventListener("click", entregarDinero);
 
-for(b of caja)
+function entregarDinero()
 {
-    if (dinero > 0)
+        for(bi of caja)
     {
-        division = Math.floor(dinero / b.valor);
-        if (division > b.cantidad)
-            {
-                papeles = b.cantidad;
-            }
-        else
+        if (dinero > 0)
         {
-            papeles = division;
+            division = Math.floor(dinero / bi.valor);
+            if (division > bi.cantidad)
+                {
+                    papeles = bi.cantidad;
+                }
+            else
+            {
+                papeles = division;
+            }
+            entregado.push(new Billete(bi.valor,papeles) );
+            dinero = dinero - (bi.valor * papeles);
         }
-        entregado.push(new Billete(b.valor,papeles) );
-        dinero = dinero - (b.valor * papeles);
     }
+    console.log(entregado);
 }
+
+
     
-for(entrega of entregado)
-    {
-        entrega.mostrar();
-        console.log(entrega);
-    }
+
 
