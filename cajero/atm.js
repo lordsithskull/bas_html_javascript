@@ -8,6 +8,7 @@ var division = 0, papeles = 0 ;
 
 var boton = document.getElementById("extraer");
 boton.addEventListener("click", entregarDinero);
+var resultado = document.getElementById("resultado");
 
 function entregarDinero()
 {
@@ -32,12 +33,15 @@ function entregarDinero()
     }
     
     if (dinero > 0)
-    {
-        console.log("Soy un cajero pobre");
-    }
+        {
+            resultado.innerHTML = "Soy un cajero pobre";
+        }
     else
     {
-        console.log(entregado);
+        for (var e of entregado)
+        {
+           resultado.innerHTML = resultado.innerHTML + e.cantidad +" billetes de $" + e.valor + "<br>"; 
+        }
     }
 }
 
