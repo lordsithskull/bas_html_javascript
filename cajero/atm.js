@@ -3,7 +3,7 @@ caja.push(new Billete(20, 20) );
 caja.push(new Billete(10, 2) );
 
 
-var dinero = 5, totalCaja = 0;
+var dinero, totalCaja = 0;
 var division = 0, papeles = 0 ;
 
 var boton = document.getElementById("extraer");
@@ -11,6 +11,8 @@ boton.addEventListener("click", entregarDinero);
 
 function entregarDinero()
 {
+    var tx = document.getElementById("dinero");
+    dinero = parseInt(tx.value);
         for(bi of caja)
     {
         if (dinero > 0)
