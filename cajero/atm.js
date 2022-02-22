@@ -1,9 +1,9 @@
-caja.push(new Billete(50, 5) );
+caja.push(new Billete(50, 50) );
 caja.push(new Billete(20, 20) );
 caja.push(new Billete(10, 2) );
 
 
-var dinero = 150, totalCaja = 0;
+var dinero = 5, totalCaja = 0;
 var division = 0, papeles = 0 ;
 
 var boton = document.getElementById("extraer");
@@ -28,10 +28,14 @@ function entregarDinero()
             dinero = dinero - (bi.valor * papeles);
         }
     }
-    console.log(entregado);
-}
-
-
     
-
+    if (dinero > 0)
+    {
+        console.log("Soy un cajero pobre");
+    }
+    else
+    {
+        console.log(entregado);
+    }
+}
 
