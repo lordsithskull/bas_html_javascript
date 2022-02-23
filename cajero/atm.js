@@ -1,6 +1,6 @@
 caja.push(new Billete(50, 50) );
-caja.push(new Billete(20, 20) );
-caja.push(new Billete(10, 2) );
+caja.push(new Billete(20, 2) );
+caja.push(new Billete(10, 1) );
 
 
 var dinero, totalCaja = 0;
@@ -34,11 +34,12 @@ function entregarDinero()
     
     if (dinero > 0)
         {
-            resultado.innerHTML = "Soy un cajero pobre";
+            resultado.innerHTML = "No puedo entregar esa cantidad <br>";
         }
     else
     {
         for (var e of entregado)
+        if (e.cantidad != 0)
         {
            resultado.innerHTML = resultado.innerHTML + e.cantidad +" billetes de $" + e.valor + "<br>"; 
         }
