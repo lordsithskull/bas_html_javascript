@@ -1,2 +1,4 @@
 *.png
 *.gif
+*.json
+*/node_modules

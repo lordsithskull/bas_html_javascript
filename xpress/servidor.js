@@ -1,15 +1,21 @@
-var express = requiere("express");
-var aplicacion = express();
+//https://www.npmjs.com/package/express
+
+var expreso = require("express");
+var aplicacion = expreso();
 
 aplicacion.get('/', inicio);
-aplicacion.get('/', cursos);
+aplicacion.get('/', curso);
+
 
 function inicio (peticion, resultado)
 {
-    resultado.send("Este es el <strong> Home</strong>")
+    resultado.send("Este es el <strong> Home SISSSSI</strong>")
 }
 
-function cursos (peticion, resultado)
+function curso (peticion, resultado)
 {
-    resultado.send("Estos son los <strong>Cursos</strong>")
+    resultado.send("Este es el <strong> CURSO</strong>")
 }
+
+
+aplicacion.listen(8989);
