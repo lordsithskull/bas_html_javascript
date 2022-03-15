@@ -4,7 +4,7 @@ var expreso = require("express");
 var aplicacion = expreso();
 
 aplicacion.get('/', inicio);
-aplicacion.get('/', curso);
+aplicacion.get('/curso', curso);
 
 
 function inicio (peticion, resultado)
