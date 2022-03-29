@@ -2,3 +2,4 @@
 *.gif
 *.json
 */node_modules
+*/arduinode
